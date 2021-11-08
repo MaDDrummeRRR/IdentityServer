@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+    mssql:
+        image: mcr.microsoft.com/mssql/server:2019-latest
+        container_name: db
+        ports:
+          - 1433:1433
+        environment:
+            MSSQL_PID: Developer 
+            SA_PASSWORD: 'qaz123QAZ!@#'
+            ACCEPT_EULA: 'Y'
+            TZ: Europe/Moscow

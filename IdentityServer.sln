@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31717.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VRM.IdentityServer.Server", "VRM.IdentityServer.Server\VRM.IdentityServer.Server.csproj", "{D1AEE112-1A25-4B13-A0B0-A60B9786651F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VRM.IdentityServer.Api1", "VRM.IdentityServer.Api1\VRM.IdentityServer.Api1.csproj", "{39F79186-BD4C-4DE3-9362-A6E5CA8598A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VRM.IdentityServer.Api2", "VRM.IdentityServer.Api2\VRM.IdentityServer.Api2.csproj", "{BBED8EA2-E02F-4528-91E8-259111A09388}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B1BBDAB0-3845-431D-B416-C089BD7539B9}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1AEE112-1A25-4B13-A0B0-A60B9786651F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1AEE112-1A25-4B13-A0B0-A60B9786651F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1AEE112-1A25-4B13-A0B0-A60B9786651F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1AEE112-1A25-4B13-A0B0-A60B9786651F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39F79186-BD4C-4DE3-9362-A6E5CA8598A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39F79186-BD4C-4DE3-9362-A6E5CA8598A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39F79186-BD4C-4DE3-9362-A6E5CA8598A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39F79186-BD4C-4DE3-9362-A6E5CA8598A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBED8EA2-E02F-4528-91E8-259111A09388}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBED8EA2-E02F-4528-91E8-259111A09388}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBED8EA2-E02F-4528-91E8-259111A09388}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBED8EA2-E02F-4528-91E8-259111A09388}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {820D9264-B81B-4A37-A651-BEAFB9D9ABD1}
+	EndGlobalSection
+EndGlobal
