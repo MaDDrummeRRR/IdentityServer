@@ -32,7 +32,7 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(config =>
 builder.Services.ConfigureApplicationCookie(config =>
 {
     config.Cookie.Name = "IdentityServer.Cookie";
-    config.LoginPath = "Home/Login";
+    config.LoginPath = "/Home/Login";
 });
 
 // Здесь добавляем IdentityServer4, который управляет разрешениями и валидациями
@@ -51,7 +51,10 @@ builder.Services.AddIdentityServer()
         options.ConfigureDbContext = b =>
         b.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
             sql => sql.MigrationsAssembly(migrationsAssembly));
-    });
+    })
+    // Метод создает временный ключ для подписи. Использовать нужно только при тестировании
+    // В Production следует использовать нормальный сертификат
+    .AddDeveloperSigningCredential();
 
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen(c =>
@@ -60,6 +63,9 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 var app = builder.Build();
+
+// Заполняем БД тестовыми данными (по идее нужно запустить единожды, но для теста можно оставить так)
+DatabaseInitializer.Seed(app);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

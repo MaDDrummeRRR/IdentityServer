@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace VRM.IdentityServer.Server.Data
 {
-    public class ApplicationDBContext : IdentityDbContext<IdentityUser,IdentityRole, string>
+    public class ApplicationDBContext : IdentityDbContext<IdentityUser, IdentityRole, string>
     {
         public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : base(options)
         {
